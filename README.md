@@ -10,9 +10,10 @@
   - In vecor mode - shapes walked around to provide best result (not zigzag etc)
   - Outer border of shapes is decreased on the size of half of laser beam to not go out-of-shape-size
   - Closed / embedded shapes handled properly (polygons with holes, polygon inside of polygon, ground around PCB etc)
-  - Personnal GCodes for laser on/off, printer preparation and stop could be confiugred
+  - Personal GCodes for laser on/off, printer preparation and stop could be confiugred
   - Dual-speed support available - fast to move to first point of track, slow for laser engraving
   - All images are vectorized at the beginning in order to not rely on colours and to decrease shapes borders
+  - Laser-off lag mitigation by using G4 command after M107 as "Laser-off" combination. (100ms by default)
 
 ### Known limitations: 
   - Line with thickness equal to laser dot size will disappear and will not be converted (0.1mm by default).

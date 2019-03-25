@@ -20,8 +20,15 @@ laser_mm = 0.1
 laser_on = "M106 S1"
 laser_off = "M107"
 
+# idle command to sleep some time after M107 in order to mitigate laser-off lag.
+# if you don't have a problems with that - make it "". 100ms = 0.1s
+laser_lag = "G4 P100"
+if laser_lag:
+    laser_off = "%s\n%s" % (laser_off, laser_lag)
+
 # Speed to reach first point of track
 laser_fast = 1500
+
 # Speed of laser during engraving
 laser_slow = 900
 
