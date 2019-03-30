@@ -94,7 +94,7 @@ image_x_estimated = float(image_original_size[1] * mm_per_dot_y)
 image_y_estimated = float(image_original_size[0] * mm_per_dot_x)
 
 # checking if provided image sizes are correct. It's extremely important since image could be deformed in case of mistake
-if mm_per_dot_x != mm_per_dot_y:
+if round(mm_per_dot_x,2) != round(mm_per_dot_y,2):
     print("You've specified incorrect size of image since calculated DPI is not proportional")
     print("Image size in pixels is:\n X: %i\n Y: %i\n" % (image_original_size[1], image_original_size[0]))
     print("X dimension provided as %fmm, estimated value based on Y size and dimension is, mm: %f" % (args.image_x_mm, image_x_estimated))
