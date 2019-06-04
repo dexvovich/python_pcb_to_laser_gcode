@@ -18,6 +18,7 @@
 ### Known limitations: 
   - Line with thickness equal to laser dot size will disappear and will not be converted (0.1mm by default).
   - In Linear mode - walking over the Y axis is done with the step equal to laser beam size (0.1 mm by default)
+  - Anet A8 is not able to properly work frequently with FAN and SD-CARD. Engraving could stuck. Use USB and direct gcode sender.
 
 ### Required additional python modules: 
   - OpenCV (cv2)
